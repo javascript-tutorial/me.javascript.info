@@ -1,3 +1,3 @@
-# JavaScript Fundamentals
+# JavaScript Osnove
 
-Let's learn the fundamentals of script building.
+Naučimo osnove izrade skripti.
