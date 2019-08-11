@@ -1,6 +1,6 @@
-# The JavaScript language
+# JavaScript jezik
 
-Here we learn JavaScript, starting from scratch and go on to advanced concepts like OOP.
+Ovde učimo JavaScript, počevši od nule i prelazimo na napredne koncepte poput OOP-a(objektno orijentisano programiranje).
 
-We concentrate on the language itself here, with the minimum of environment-specific notes.
+Ovde smo koncentrisani na sam jezik, sa minimumom specifičnih okolnosti.
 
