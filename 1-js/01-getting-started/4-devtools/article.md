@@ -1,64 +1,64 @@
-# Developer console
+# Konzola za programere
 
-Code is prone to errors. You will quite likely make errors... Oh, what am I talking about? You are *absolutely* going to make errors, at least if you're a human, not a [robot](https://en.wikipedia.org/wiki/Bender_(Futurama)).
+Kod je sklon greškama. Verovatno ćete pogrešiti ... Oh, o čemu govorim? * Apsolutno ćete grešiti, barem ako ste čovek, a ne čovek [robot](https://en.wikipedia.org/wiki/Bender_(Futurama)).
 
-But in the browser, users don't see errors by default. So, if something goes wrong in the script, we won't see what's broken and can't fix it.
+Ali u pretraživaču korisnici ne vide greške prema zadanim postavkama. Dakle, ako nešto pođe po zlu u scenariju, nećemo videti šta je slomljeno i ne možemo to da popravimo.
 
-To see errors and get a lot of other useful information about scripts, "developer tools" have been embedded in browsers.
+Da biste videli greške i dobili puno drugih korisnih informacija o skriptama, „alati za programere“ ugrađeni su u pregledače.
 
-Most developers lean towards Chrome or Firefox for development because those browsers have the best developer tools. Other browsers also provide developer tools, sometimes with special features, but are usually playing "catch-up" to Chrome or Firefox. So most developers have a "favorite" browser and switch to others if a problem is browser-specific.
+Većina programera za razvoj se naginje na Chrome ili Firefox jer ti pregledači imaju najbolje alate za programere. Ostali pregledači takođe nude alate za programere, ponekad i posebne funkcije, ali obično se igraju „nadoknadu“ za Chrome ili Firefok. Tako većina programera ima "omiljeni" pregledač i prelaze na druge ako je problem specifičan za pretraživač.
 
-Developer tools are potent; they have many features. To start, we'll learn how to open them, look at errors, and run JavaScript commands.
+Alati za programere su snažni; imaju mnogo funkcija. Za početak ćemo naučiti kako da ih otvorimo, pogledati greške i pokrenuti JavaScript komande.
 
-## Google Chrome
+## Gugl Chrome
 
-Open the page [bug.html](bug.html).
+Otvorite stranicu [bug.html](bug.html).
 
-There's an error in the JavaScript code on it. It's hidden from a regular visitor's eyes, so let's open developer tools to see it.
+Postoji greška u JavaScript kodu. Sakriven je od očiju redovnog posetioca, pa otvorimo programe za razvojne programere da bismo ih videli.
 
-Press `key:F12` or, if you're on Mac, then `key:Cmd+Opt+J`.
+Pretisni `taster:F12` ili, ako si na Mac računaru, onda `taster:Cmd+Opt+J`.
 
-The developer tools will open on the Console tab by default.
+Alatke za programere će se podrazumevano otvoriti na kartici konzola.
 
-It looks somewhat like this:
+Izgleda nekako ovako:
 
 ![chrome](chrome.png)
 
-The exact look of developer tools depends on your version of Chrome. It changes from time to time but should be similar.
+Tačan izgled alata za programere zavisi od verzije Chrome-a. Povremeno se menja, ali bi trebalo da bude slično.
 
-- Here we can see the red-colored error message. In this case, the script contains an unknown "lalala" command.
-- On the right, there is a clickable link to the source `bug.html:12` with the line number where the error has occurred.
+- Ovde možemo videti poruku o grešci u crvenoj boji. U ovom slučaju, skripta sadrži nepoznatu komandu "lalala".
+- Sa desne strane postoji veza na koju se može kliknuti na izvor `bug.html: 12` sa brojem linije na kojoj je došlo do greške.
 
-Below the error message, there is a blue `>` symbol. It marks a "command line" where we can type JavaScript commands. Press `key:Enter` to run them (`key:Shift+Enter` to input multi-line commands).
+Ispod poruke o grešci nalazi se plavi simbol ">". Označava „komandnu liniju“ u koju možemo otkucati JavaScript komande. Pretisni `taster:Enter` da ih pokreneš (`taster:Shift+Enter` za unos višerednih komandi).
 
-Now we can see errors, and that's enough for a start. We'll come back to developer tools later and cover debugging more in-depth in the chapter <info:debugging-chrome>.
+Sada možemo videti greške, a to je dovoljno za početak. Kasnije ćemo se vratiti alatima za razvojne programere i detaljnije ćemo pokloniti pogrešku u ovom poglavlju <info:debugging-chrome>.
 
 
-## Firefox, Edge, and others
+## Firefox, Edge, i ostali
 
-Most other browsers use `key:F12` to open developer tools.
+Većina pretraživača koristi `taster:F12` za otvaranje alata za programere.
 
-The look & feel of them is quite similar. Once you know how to use one of these tools (you can start with Chrome), you can easily switch to another.
+Izgled i osećaj kod njih prilično su slični. Kada znate kako da koristite jedan od ovih alata (možete početi sa Chrome-om), lako možete preći na drugi.
 
 ## Safari
 
-Safari (Mac browser, not supported by Windows/Linux) is a little bit special here. We need to enable the "Develop menu" first.
+Safari (Mac pretraživač, nije podžan od strane Windows/Linux) je malo poseban ovde. Prvo moramo da omogućimo „Developer meni“.
 
-Open Preferences and go to the "Advanced" pane. There's a checkbox at the bottom:
+Otvorite Postavke i idite na okno „Napredno“. Na dnu je potvrdni okvir:
 
 ![safari](safari.png)
 
-Now `key:Cmd+Opt+C` can toggle the console. Also, note that the new top menu item named "Develop" has appeared. It has many commands and options.
+Sada `taster:Cmd+Opt+C` može prebaciti konzolu. Takođe, imajte na umu da se pojavila nova stavka gornjeg menija pod nazivom „Develop“. Ima mnogo komandi i opcija.
 
-```smart header="Multi-line input"
-Usually, when we put a line of code into the console, and then press `key:Enter`, it executes.
+```smart header="Više-linijski ulaz"
+Obično kada stavimo liniju koda u konzolu, a zatim pritisnemo `taster: Enter`, izvršava se.
 
-To insert multiple lines, press `key:Shift+Enter`. This way one can enter long fragments of JavaScript code.
+Da biste umetnuli više linija, pritisnite `taster:Shift+Enter`. Na ovaj način se mogu uneti dugi fragmenti JavaScript koda.
 ```
 
-## Summary
+## Rezime
 
-- Developer tools allow us to see errors, run commands, examine variables, and much more.
-- They can be opened with `key:F12` for most browsers on Windows. Chrome for Mac needs `key:Cmd+Opt+J`, Safari: `key:Cmd+Opt+C` (need to enable first).
+- Alatke za programere omogućavaju nam da vidimo greške, izvršavamo komande, ispitujemo promenljive i još mnogo toga.
+- Mogu se otvoriti sa `taster:F12` za većinu pregledača u operativnom sistemu Windows. Chrome za Mac treba `taster:Cmd+Opt+J`, Safari: `taster:Cmd+Opt+C` (prvo treba da se omogući).
 
-Now we have the environment ready. In the next section, we'll get down to JavaScript.
+Sad je spremno okruženje. U sledećem odeljku preći ćemo na JavaScript.
