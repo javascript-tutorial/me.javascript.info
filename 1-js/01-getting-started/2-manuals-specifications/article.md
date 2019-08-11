@@ -1,42 +1,42 @@
 
-# Manuals and specifications
+# Priručnici i specifikacije
 
-This book is a *tutorial*. It aims to help you gradually learn the language. But once you're familiar with the basics, you'll need other sources.
+Ova knjiga je * tutorial *. Cilj mu je da vam pomogne da postepeno naučite jezik. Ali nakon što se upoznate sa osnovama, trebat će vam i drugi izvori.
 
-## Specification
+## Specifikacije
 
-**The ECMA-262 specification** contains the most in-depth, detailed and formalized information about JavaScript. It defines the language.
+**ECMA-262 specifikacija** sadrži najdublje, detaljne i formalizovane informacije o JavaScript-u. Definiše jezik.
 
-But being that formalized, it's difficult to understand at first. So if you need the most trustworthy source of information about the language details, the specification is the right place. But it's not for everyday use.
+Ali kako je to formalizovano, u početku je teško razumeti. Dakle, ako vam je potreban najpouzdaniji izvor informacija o detaljima jezika, specifikacija je pravo mesto. Ali nije za svakodnevnu upotrebu.
 
-The latest draft is at <https://tc39.es/ecma262/>.
+Najnoviji nacrt je u <https://tc39.es/ecma262/>.
 
-To read about new bleeding-edge features, including those that are "almost standard" (so-called "stage 3"), see proposals at <https://github.com/tc39/proposals>.
+Da biste pročitali nove funkcije 'krvarenja ivice', uključujući one koje su „skoro standardne“ (tzv. „Faza 3“), pogledajte predloge na <https://github.com/tc39/proposals>.
 
-Also, if you're in developing for the browser, then there are other specs covered in the [second part](info:browser-environment) of the tutorial.
+Takođe, ako se razvijate za pregledač, onda postoje i druge specifikacije pokrivene u [drugom delu] (info:browser-environment) uputstva.
 
-## Manuals
+## Priručnici
 
-- **MDN (Mozilla) JavaScript Reference** is a manual with examples and other information. It's great to get in-depth information about individual language functions, methods etc.
+- **MDN (Mozilla) JavaScript Referenca** je priručnik sa primerima i drugim informacijama. Odlično je dobiti detaljne informacije o pojedinim funkcijama jezika, metodama itd.
 
-    One can find it at <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference>.
+    Može se naći na <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference>.
 
-    Although, it's often best to use an internet search instead. Just use "MDN [term]" in the query, e.g. <https://google.com/search?q=MDN+parseInt> to search for `parseInt` function.
+    Mada, često je najbolje koristiti internet pretragu. Samo napiši "MDN [termin]" u pretragu, npr. <https://google.com/search?q=MDN+parseInt> za traženje `parseInt` funkcije.
 
 
-- **MSDN** – Microsoft manual with a lot of information, including JavaScript (often referred to as JScript). If one needs something specific to Internet Explorer, better go there: <http://msdn.microsoft.com/>.
+- **MSDN** – Microsoftov priručnik sa puno informacija, uključujući JavaScript (koji se često naziva JScript). Ako vam treba nešto specifično za Internet Ekplorer, idite tamo: <http://msdn.microsoft.com/>.
 
-    Also, we can use an internet search with phrases such as "RegExp MSDN" or "RegExp MSDN jscript".
+    Takođe, možemo da koristimo internet pretragu sa izrazima kao što su "RegExp MSDN" ili "RegExp MSDN jscript".
 
-## Compatibility tables
+## Tabele kompatibilnosti
 
-JavaScript is a developing language, new features get added regularly.
+JavaScript je jezik u razvoju, nove funkcije se redovno dodaju.
 
-To see their support among browser-based and other engines, see:
+Da biste videli njihovu podršku među pregledačima i drugim motorima, pogledajte:
 
-- <http://caniuse.com> - per-feature tables of support, e.g. to see which engines support modern cryptography functions: <http://caniuse.com/#feat=cryptography>.
-- <https://kangax.github.io/compat-table> - a table with language features and engines that support those or don't support.
+- <http://caniuse.com> - tabele podrške po karakteristikama, npr. da biste videli koji motori podržavaju moderne funkcije kriptografije: <http://caniuse.com/#feat=cryptography>.
+- <https://kangax.github.io/compat-table> - tabela sa jezičkim funkcijama i motorima koji ih podržavaju ili ne podržavaju.
 
-All these resources are useful in real-life development, as they contain valuable information about language details, their support etc.
+Svi ovi resursi su korisni u razvoju u stvarnom životu, jer sadrže dragocene informacije o jezičnim detaljima, njihovoj podršci itd.
 
-Please remember them (or this page) for the cases when you need in-depth information about a particular feature.
+Zapamtite ih (ili ovu stranicu) u slučajevima kada su vam potrebne detaljne informacije o određenoj funkciji.
