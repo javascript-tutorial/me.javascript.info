@@ -1,3 +1,3 @@
-# An introduction
+# Uvod
 
-About the JavaScript language and the environment to develop with it.
+O JavaScript jeziku i okruženju koje treba razvijati sa njim.
