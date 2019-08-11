@@ -1,7 +1,7 @@
 
 # Priručnici i specifikacije
 
-Ova knjiga je * tutorial *. Cilj mu je da vam pomogne da postepeno naučite jezik. Ali nakon što se upoznate sa osnovama, trebat će vam i drugi izvori.
+Ova knjiga je *tutorial*. Cilj mu je da vam pomogne da postepeno naučite jezik. Ali nakon što se upoznate sa osnovama, trebat će vam i drugi izvori.
 
 ## Specifikacije
 
