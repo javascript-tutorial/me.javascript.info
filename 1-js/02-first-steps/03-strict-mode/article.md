@@ -1,85 +1,86 @@
-# The modern mode, "use strict"
+# Savremeni mod, "use strict"
 
-For a long time, JavaScript evolved without compatibility issues. New features were added to the language while old functionality didn't change.
+Dugo vremena je JavaScript evoluirao bez problema sa kompatibilnošću. Jeziku su dodate nove funkcije dok se stara funkcionalnost nije promenila.
 
-That had the benefit of never breaking existing code. But the downside was that any mistake or an imperfect decision made by JavaScript's creators got stuck in the language forever.
+To je imalo koristi od toga što nikada nije prekršilo postojeći kod. Ali, nedostatak je bio da se bilo kakva greška ili nesavršena odluka koju su doneli JavaScript kreatori zauvek zaglavi u jeziku.
 
-This was the case until 2009 when ECMAScript 5 (ES5) appeared. It added new features to the language and modified some of the existing ones. To keep the old code working, most such modifications are off by default. You need to explicitly enable them with a special directive: `"use strict"`.
+Tako je bilo sve do 2009. godine kada se pojavio ECMAScript 5 (ES5). Jeziku je dodao nove funkcije i modifikovao neke od postojećih. Da bi stari kod radio, većina takvih modifikacija je podrazumevano isključena. Morate ih izričito omogućiti posebnom direktivom: `"use strict"`.
 
 ## "use strict"
 
-The directive looks like a string: `"use strict"` or `'use strict'`. When it is located at the top of a script, the whole script works the "modern" way.
+Direktiva izgleda kao string: `"use strict"` ili `'use strict'`. Kada se nalazi na vrhu skripte, ceo skript deluje na "moderan" način.
 
-For example:
+Na primjer:
 
 ```js
 "use strict";
 
-// this code works the modern way
+// ovaj kod deluje na savremen način
 ...
 ```
 
-We will learn functions (a way to group commands) soon. Looking ahead, let's note that `"use strict"` can be put at the beginning of the function body instead of the whole script. Doing that enables strict mode in that function only. But usually, people use it for the whole script.
+Uskoro ćemo naučiti funkcije (način za grupisanje komandi). Gledajući napred, uzmimo to u obzir `"use strict"` može se staviti na početak tela funkcije umesto celog skripta. To omogućava strogi režim samo u toj funkciji. Ali obično ga ljudi koriste za cijelu skriptu.
 
 
-````warn header="Ensure that \"use strict\" is at the top"
-Please make sure that `"use strict"` is at the top of your scripts, otherwise strict mode may not be enabled.
+````warn header="Obezbijedi da je \"use strict\" na vrhu"
+Obavezno proverite da li se „use strict“ nalazi na vrhu vaše skripte, jer u suprotnom strogi režim možda neće biti omogućen.
 
-Strict mode isn't enabled here:
+
+Strogi režim ovde nije omogućen:
 
 ```js no-strict
-alert("some code");
-// "use strict" below is ignored--it must be at the top
+alert("neki kod");
+// "use strict" ispod se ignoriše-- mora biti na vrhu
 
 "use strict";
 
-// strict mode is not activated
+// strogi režim nije omogućen
 ```
 
-Only comments may appear above `"use strict"`.
+Gore se mogu pojaviti samo komentari `"use strict"`.
 ````
 
-```warn header="There's no way to cancel `use strict`"
-There is no directive like `"no use strict"` that reverts the engine to old behavior.
+```warn header="Nema načina da otkažete `use strict`"
+Ne postoji takva direktiva `"no use strict"` koja vraća motor na staro ponašanje.
 
-Once we enter strict mode, there's no return.
+Jednom kada uđemo u strogi režim, nema povratka.
 ```
 
-## Browser console
+## Konzola pregledača
 
-For the future, when you use a browser console to test features, please note that it doesn't `use strict` by default.
+Kada za testiranje funkcija koristite konzolu pregledača za ubuduće, imajte na umu da to nema `use strict` podrazumijevano.
 
-Sometimes, when `use strict` makes a difference, you'll get incorrect results.
+Ponekad, kada `use strict` čini razliku, dobićete pogrešne rezultate.
 
-You can try to press `key:Shift+Enter` to input multiple lines, and put `use strict` on top, like this:
+Možete da pokušate da pritisnete `taster:Shift+Enter` da unesete više redova i stavite „use strict“ na vrh, ovako:
 
 ```js
-'use strict'; <Shift+Enter for a newline>
-//  ...your code
-<Enter to run>
+'use strict'; <Shift+Enter za novi red>
+//  ...tvoj kod
+<Enter za pokretanje>
 ```
 
-It works in most browsers, namely Firefox and Chrome.
+Radi u većini pregledača, naime Firefox i Chrome.
 
-If it doesn't, the most reliable way to ensure `use strict` would be to input the code into console like this:
+Ako ne, najpouzdaniji način da to osigurate `use strict` bilo bi da unesete kod u konzolu ovako:
 
 ```js
 (function() {
   'use strict';
 
-  // ...your code...
+  // ...tvoj kod...
 })()
 ```
 
-## Always "use strict"
+## Uvjek "use strict"
 
-We have yet to cover the differences between strict mode and the "default" mode.
+Moramo još da pokrijemo razlike između strogog načina rada i "uobičajenog" režima.
 
-In the next chapters, as we learn language features, we'll note the differences between the strict and default modes. Luckily, there aren't many and they actually make our lives better.
+U sledećim poglavljima, dok učimo jezičke karakteristike, primetićemo razlike između strogog i zadanog načina rada. Srećom, nema ih mnogo i oni nam zapravo poboljšavaju život.
 
-For now, it's enough to know about it in general:
+Za sada je dovoljno znati o tome uopšte:
 
-1. The `"use strict"` directive switches the engine to the "modern" mode, changing the behavior of some built-in features. We'll see the details later in the tutorial.
-2. Strict mode is enabled by placing `"use strict"` at the top of a script or function. Several language features, like "classes" and "modules", enable strict mode automatically.
-3. Strict mode is supported by all modern browsers.
-4. We recommended always starting scripts with `"use strict"`. All examples in this tutorial assume strict mode unless (very rarely) specified otherwise.
+1. `"use strict"` direktiva prebacuje motor u „moderan“ mod, menjajući ponašanje nekih ugrađenih funkcija. Detalje ćemo videti kasnije u vodiču.
+2. trogi režim je omogućen postavljanjem `"use strict"` na vrhu skripte ili funkcije. Nekoliko jezičnih funkcija, poput „klase“ i „modula“, automatski omogućuju strogi režim.
+3. Strogi režim podržavaju svi moderni pregledači.
+4. Preporučujemo uvek pokretanje skripti sa `"use strict"`. Svi primjeri u ovom vodiču pretpostavljaju strogi način rada, osim ako (vrlo rijetko) nije drugačije određeno.
