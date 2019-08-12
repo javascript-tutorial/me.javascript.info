@@ -1,44 +1,45 @@
-# Code structure
+# Struktura koda
 
-The first thing we'll study is the building blocks of code.
+Prvo što ćemo proučiti pisanje blokova koda.
 
-## Statements
+## Iskazi
 
-Statements are syntax constructs and commands that perform actions.
+Iskazi su sintaksne konstrukcije i naredbe koje izvode akcije.
 
-We've already seen a statement, `alert('Hello, world!')`, which shows the message "Hello, world!".
+Već smo viđeli iskaz, `alert('Zdravo svijete!')`, koja prikazuje poruku "Zdravo svijete!".
 
-We can have as many statements in our code as we want. Statements can be separated with a semicolon.
+U kodu možemo imati onoliko iskaza koliko želimo. Iskazi se mogu odvojiti tačkom sa zarezom.
 
-For example, here we split "Hello World" into two alerts:
-
-```js run no-beautify
-alert('Hello'); alert('World');
-```
-
-Usually, statements are written on separate lines to make the code more readable:
+Na primer, ovde smo podelili "Zdravo svijete!" na dva upozorenja:
 
 ```js run no-beautify
-alert('Hello');
-alert('World');
+alert('Zdravo'); alert('svijete!');
 ```
 
-## Semicolons [#semicolon]
-
-A semicolon may be omitted in most cases when a line break exists.
-
-This would also work:
+Iskazi se obično pišu u novim linijama kako bi se kod učinio čitljivijim:
 
 ```js run no-beautify
-alert('Hello')
-alert('World')
+alert('Zdravo');
+alert('svijete!');
 ```
 
-Here, JavaScript interprets the line break as an "implicit" semicolon. This is called an [automatic semicolon insertion](https://tc39.github.io/ecma262/#sec-automatic-semicolon-insertion).
+## Tačka-zarez [#tackazarez]
 
-**In most cases, a newline implies a semicolon. But "in most cases" does not mean "always"!**
+Tačka-zarez može biti izostavljena u većini slučajeva kada postoji prekid linije.
 
-There are cases when a newline does not mean a semicolon. For example:
+Ovo bi takođe funkcionisalo:
+
+```js run no-beautify
+alert('Zdravo')
+alert('svijete')
+```
+
+Ovde JavaScript interpretira proboj prelom linija kao "implicitni" tačka-zarez. To se naziva [automatsko umetanje tačake-zareza]
+(https://tc39.github.io/ecma262/#sec-automatic-semicolon-insertion).
+
+**U većini slučajeva novi red podrazumeva tačku sa zarezom. Ali "u većini slučajeva" ne znači "uvjek"!**
+
+Postoje slučajevi kada nova linija ne znači tačka-zarez. Na primjer:
 
 ```js run no-beautify
 alert(3 +
@@ -46,114 +47,116 @@ alert(3 +
 + 2);
 ```
 
-The code outputs `6` because JavaScript does not insert semicolons here. It is intuitively obvious that if the line ends with a plus `"+"`, then it is an "incomplete expression", so the semicolon is not required. And in this case that works as intended.
+Kod ispisuje `6`, jer JavaScript ovde ne ubacuje tačku-zarez. Intuitivno je očigledno da ako se linija završava sa plus "+" `, onda je to" nepotpun izraz ", pa tačka-zarez nije obavezna. I u ovom slučaju to radi onako kako je planirano.
 
-**But there are situations where JavaScript "fails" to assume a semicolon where it is really needed.**
 
-Errors which occur in such cases are quite hard to find and fix.
+**Ali postoje situacije u kojima JavaScript „ne uspijeva“ da pretpostavi tačku-zarez tamo gde je stvarno potrebno.
+**
 
-````smart header="An example of an error"
-If you're curious to see a concrete example of such an error, check this code out:
+Greške koje se dešavaju u takvim slučajevima je stvarno teško otkriti i ispraviti.
+
+````smart header="Primjer greške"
+Ako ste radoznali da vidite konkretan primer takve greške, pogledajte ovaj kod:
 
 ```js run
 [1, 2].forEach(alert)
 ```
 
-No need to think about the meaning of the brackets `[]` and `forEach` yet. We'll study them later. For now, just remember the result of the code: it shows `1` then `2`.
+Još nije potrebno razmišljati o značenju zagrada `[]` i `forEach`. Kasnije ćemo ih proučiti. Za sada se samo sjetite rezultata koda: prikazuje "1", a zatim "2".
 
-Now, let's add an `alert` before the code and *not* finish it with a semicolon:
+Sada, dodajmo upozorenje prije koda i *ne* završimo tačkom-zarezom:
 
 ```js run no-beautify
-alert("There will be an error")
+alert("Ovđe će doći do greške")
 
 [1, 2].forEach(alert)
 ```
 
-Now if we run the code, only the first `alert` is shown and then we have an error!
+Sada ako pokrenemo kod, prikazuje se samo prvo `upozorenje` i tada imamo grešku!
 
-But everything is fine again if we add a semicolon after `alert`:
+Ali opet je sve u redu ako nakon `upozorenja` dodamo tačku-zarez:
 ```js run
-alert("All fine now");
+alert("Sad je sve u redu!");
 
 [1, 2].forEach(alert)  
 ```
 
-Now we have the "All fine now" message followed by `1` and `2`.
+Sada imamo poruku "Sve u redu", a zatim slijede "1" i "2".
 
 
-The error in the no-semicolon variant occurs because JavaScript does not assume a semicolon before square brackets `[...]`.
+Do greške u varijanti koja nije pod tačkom-zarezom događa se jer JavaScript ne podrazumeva tačku sa zarezom ispred uglastih zagrada `[...]`.
 
-So, because the semicolon is not auto-inserted, the code in the first example is treated as a single statement. Here's how the engine sees it:
+Dakle, jer tačka-zarez nije automatski umetnuto, kod u prvom primeru se tretira kao jedna stavka. Evo kako motor to vidi:
+
 
 ```js run no-beautify
-alert("There will be an error")[1, 2].forEach(alert)
+alert("Ovđe će doći do greške!")[1, 2].forEach(alert)
 ```
 
-But it should be two separate statements, not one. Such a merging in this case is just wrong, hence the error. This can happen in other situations.
+Ali to bi trebalo biti dva odvojena iskaza, ne jedan. Takvo spajanje u ovom slučaju je upravo pogrešno, otuda i greška. To se može dogoditi i u drugim situacijama.
 ````
 
-We recommend putting semicolons between statements even if they are separated by newlines. This rule is widely adopted by the community. Let's note once again -- *it is possible* to leave out semicolons most of the time. But it's safer -- especially for a beginner -- to use them.
+Preporučujemo stavljanje tačke-zareza između izjava, čak i ako su razdvojene novim linijama. Ovo pravilo široko prihvata zajednica. Napomenimo još jednom - *moguće je* izostavljati tačku-zarez većinu vremena. Ali sigurnije je - posebno za početnike - koristiti ih.
 
-## Comments
+## Komentari
 
-As time goes on, programs become more and more complex. It becomes necessary to add *comments* which describe what the code does and why.
+Kako vrijeme prolazi, programi postaju sve složeniji. Potrebno je dodati *komentare* koji opisuju šta kod radi i zašto.
 
-Comments can be put into any place of a script. They don't affect its execution because the engine simply ignores them.
+Komentari se mogu staviti na bilo koje mesto skripte. Oni ne utiču na njegovo izvršenje jer ih motor jednostavno ignoriše.
 
-**One-line comments start with two forward slash characters `//`.**
+**Jednolinijski komentari počinju sa dvije prednje kose crte `//`.**
 
-The rest of the line is a comment. It may occupy a full line of its own or follow a statement.
+Ostatak linije je komentar. Može zauzeti punu liniju ili slediti iskaz.
 
-Like here:
+Kao što je ovđe:
 ```js run
-// This comment occupies a line of its own
-alert('Hello');
+// Ovaj komentar zauzima sopstvenu liniju
+alert('Zdravo');
 
-alert('World'); // This comment follows the statement
+alert('Svijete'); // Ovaj komentar prati iskaz
 ```
 
-**Multiline comments start with a forward slash and an asterisk <code>/&#42;</code> and end with an asterisk and a forward slash <code>&#42;/</code>.**
+**Višelinijski komentari počinju sa jednom prednjom kosom crtom i zvjezdicom <code>/&#42;</code> i završavaju se sa zvjezdicom i prednjom kosom crtom <code>&#42;/</code>.**
 
-Like this:
+Kao što je ovo:
 
 ```js run
-/* An example with two messages.
-This is a multiline comment.
+/* Primjer sa dvije poruke
+Ovo je višelinijski komentar
 */
-alert('Hello');
-alert('World');
+alert('Zdravo');
+alert('Svijete');
 ```
 
-The content of comments is ignored, so if we put code inside <code>/&#42; ... &#42;/</code>, it won't execute.
+Sadržaj komentara se ignoriše, pa ako stavimo kod unutra <code>/&#42; ... &#42;/</code>, neće se izvršavati.
 
-Sometimes it can be handy to temporarily disable a part of code:
-
+Ponekad je korisno privremeno deaktivirati deo koda:
 ```js run
-/* Commenting out the code
-alert('Hello');
+/* Komentarisanje koda
+alert('Zdravo');
 */
-alert('World');
+alert('Svijete');
 ```
 
-```smart header="Use hotkeys!"
-In most editors, a line of code can be commented out by pressing the `key:Ctrl+/` hotkey for a single-line comment and something like `key:Ctrl+Shift+/` -- for multiline comments (select a piece of code and press the hotkey). For Mac, try `key:Cmd` instead of `key:Ctrl`.
+```smart header="Korišćenje tastera za prečice!"
+U većini urednika koda se može komentarisati pritiskom na `taster:Ctrl+/` za jednolinijski komentar i nešto slično `taster:Ctrl+Shift+/` -- za komentare sa više linija (izaberite deo koda i pritisnite taster). Probajte za Mac računare `taster:Cmd` umjesto `taster:Ctrl`.
 ```
 
-````warn header="Nested comments are not supported!"
-There may not be `/*...*/` inside another `/*...*/`.
+````warn header="Uneseni komentari nisu podržani!"
+Ne može biti `/*...*/` u `/*...*/`.
 
-Such code will die with an error:
+Takav kod bit će uništen greškom
 
 ```js run no-beautify
 /*
-  /* nested comment ?!? */
+  /* komentar u komentar ?!? */
 */
-alert( 'World' );
+alert( 'Svijet' );
 ```
 ````
 
-Please, don't hesitate to comment your code.
+Ne ustručavajte se da komentarišete svoj kod.
 
-Comments increase the overall code footprint, but that's not a problem at all. There are many tools which minify code before publishing to a production server. They remove comments, so they don't appear in the working scripts. Therefore, comments do not have negative effects on production at all.
+Komentari povećavaju ukupni trag koda, ali to uopšte nije problem. Postoji mnogo alata koji minimiziraju kod prije objavljivanja na proizvodnom serveru. Oni uklanjaju komentare, tako da se ne pojavljuju u radnim skriptama. Stoga komentari uopšte nemaju negativne efekte na proizvodnju.
 
-Later in the tutorial there will be a chapter <info:code-quality> that also explains how to write better comments.
+Kasnije će u udžbeniku biti poglavlja <info:code-quality> to takođe objašnjava kako napisati bolje komentare.
