@@ -1,12 +1,12 @@
-In the code below, each line corresponds to the item in the task list.
+U donjem kodu svaki red odgovara stavci na listi zadataka.
 
 ```js run
-let admin, name; // can declare two variables at once
+let admin, ime; // može deklarisadi dvije varijable odjenom
 
-name = "John";
+ime = "Veljko";
 
-admin = name;
+admin = ime;
 
-alert( admin ); // "John"
+alert( admin ); // "Veljko"
 ```
 
