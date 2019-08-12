@@ -1,21 +1,21 @@
-## The variable for our planet
+## Varijabla za našu planetu
 
-That's simple:
-
-```js
-let ourPlanetName = "Earth";
-```
-
-Note, we could use a shorter name `planet`, but it might be not obvious what planet it refers to. It's nice to be more verbose. At least until the variable isNotTooLong.
-
-## The name of the current visitor
+To je jednostavno:
 
 ```js
-let currentUserName = "John";
+let imeNašePlanete = "Zemlja";
 ```
 
-Again, we could shorten that to `userName` if we know for sure that the user is current.
+Imajte na umu da bismo mogli koristiti kraći naziv `planeta`, ali možda nije očigledno na koju se planetu odnosi. Lijepo je biti višestruk. Barem dok varijabla nijeNeeeeštoDuuuuuuuža od ovoga.
 
-Modern editors and autocomplete make long variable names easy to write. Don't save on them. A name with 3 words in it is fine.
+## Ime trenutnog korisnika
 
-And if your editor does not have proper autocompletion, get [a new one](/code-editors).
+```js
+let imeTrenutnogKorisnika = "Veljko";
+```
+
+Ponovo bismo to mogli skratiti na `imeKorisnika` ako znamo da je korisnik aktuelan.
+
+Moderni urednici i automatsko dovršavanje olakšavaju pisanje dugačkih imena varijabli. Ne štedite na njima. Ime sa tri riječi je sasvim OK.
+
+A ako vaš urednik nema pravilno dovršavanje, nabavite [novi](/code-editors).
