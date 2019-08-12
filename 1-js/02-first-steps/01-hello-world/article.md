@@ -101,8 +101,7 @@ Ostale stranice koje se pozivaju na isti skript uzimaće ga iz keša umesto da 
 To smanjuje promet i brže stvara stranice.
 ```
 
-````warn header="Ako je `src` postavljeno, sadržaj skripte se ignoriše."
-Pojedinačna oznaka `<script>` ne može imati atribut `src` i kod unutra.
+````warn header="Ako je `src` postavljeno, sadržaj skripte se ignoriše." Pojedinačna oznaka `<script>` ne može imati atribut `src` i kod unutra.
 
 Ovo neće raditi:
 
