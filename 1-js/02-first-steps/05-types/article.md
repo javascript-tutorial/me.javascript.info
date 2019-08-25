@@ -1,70 +1,70 @@
-# Data types
+# Tipovi podataka
 
-A variable in JavaScript can contain any data. A variable can at one moment be a string and at another be a number:
+Varijabla u JavaScript-i može da sadrži bilo koje podatke. Varijabla u jednom trenutku može biti string, a u drugom broj:
 
 ```js
-// no error
+// nema greške
 let message = "hello";
 message = 123456;
 ```
 
-Programming languages that allow such things are called "dynamically typed", meaning that there are data types, but variables are not bound to any of them.
+Programski jezici koji dopuštaju takve stvari nazivaju se „dinamički kucano“, što znači da postoje tipovi podataka, ali varijable nisu vezane ni za jedan od njih.
 
-There are seven basic data types in JavaScript. Here, we'll cover them in general and in the next chapters we'll talk about each of them in detail.
+Postoji sedam osnovnih tipova podataka u JavaScript-u. Ovde ćemo ih pokriti generalno, a u narednim ćemo poglavljima detaljno govoriti o svakom od njih.
 
-## A number
+## Broj
 
 ```js
 let n = 123;
 n = 12.345;
 ```
 
-The *number* type represents both integer and floating point numbers.
+Tip *broj* predstavlja brojeve i brojeve sa pomičnim zarezom.
 
-There are many operations for numbers, e.g. multiplication `*`, division `/`, addition `+`, subtraction `-`, and so on.
+Postoji mnogo operacija za brojeve, npr. množenje `*`, dijeljenje `/`, sabiranje `+`, oduzimanje `-`, itd.
 
-Besides regular numbers, there are so-called "special numeric values" which also belong to this data type: `Infinity`, `-Infinity` and `NaN`.
+Pored regularnih brojeva, postoje i takozvane "posebne numeričke vrednosti" koje takođe pripadaju ovom tipu podataka: `Infinity`, `-Infinity` i `NaN`.
 
-- `Infinity` represents the mathematical [Infinity](https://en.wikipedia.org/wiki/Infinity) ∞. It is a special value that's greater than any number.
+- `Infinity` predstavlja matematičku [beskonačnost](https://en.wikipedia.org/wiki/Infinity) ∞. To je posebna vrednost veća od bilo kog broja.
 
-    We can get it as a result of division by zero:
+    To možemo dobiti kao rezultat podjele na nulu:
 
     ```js run
     alert( 1 / 0 ); // Infinity
     ```
 
-    Or just reference it directly:
+    Ili direktnim navođenjem:
 
     ```js run
     alert( Infinity ); // Infinity
     ```
-- `NaN` represents a computational error. It is a result of an incorrect or an undefined mathematical operation, for instance:
+- `NaN` predstavlja grešku u računanju. Na primjer, rezultat je pogrešne ili nedefinisane matematičke operacije:
 
     ```js run
     alert( "not a number" / 2 ); // NaN, such division is erroneous
     ```
 
-    `NaN` is sticky. Any further operation on `NaN` returns `NaN`:
+    `NaN` je ljepljiv. Svako sledeća operacija na `NaN` vraća `NaN`:
 
     ```js run
     alert( "not a number" / 2 + 5 ); // NaN
     ```
 
-    So, if there's a `NaN` somewhere in a mathematical expression, it propagates to the whole result.
+    Dakle, ako negde u matematičkom izrazu postoji `NaN`, on se širi ka celokupnom rezultatu.
 
-```smart header="Mathematical operations are safe"
-Doing maths is "safe" in JavaScript. We can do anything: divide by zero, treat non-numeric strings as numbers, etc.
+```smart header="Matematičke operacije su sigurne"
+Bavljenje matematikom je u JavaScriptu sigurno. Možemo učiniti bilo šta: podeliti na nulu, tretirati ne numeričke nizove kao brojeve itd.
 
-The script will never stop with a fatal error ("die"). At worst, we'll get `NaN` as the result.
+Skripta nikada neće prestati sa fatalnom greškom ("umreti"). U najgorem slučaju dobićemo `NaN` kao rezultat.
 ```
 
-Special numeric values formally belong to the "number" type. Of course they are not numbers in the common sense of this word.
+Posebne numeričke vrednosti formalno pripadaju vrsti „broj“. Naravno da to nisu brojevi u zdravom smislu ove reči.
 
-We'll see more about working with numbers in the chapter <info:number>.
+Više ćemo videti o radu sa brojevima u ovom poglavlju <info:number>.
 
-## A string
+## String
 
-A string in JavaScript must be surrounded by quotes.
+String u JavaScript moraju biti između znakova navodnika.
 
 ```js
 let str = "Hello";
@@ -72,15 +72,15 @@ let str2 = 'Single quotes are ok too';
 let phrase = `can embed ${str}`;
 ```
 
-In JavaScript, there are 3 types of quotes.
+U JavaScript, postoje 3 vrste navodnika.
 
-1. Double quotes: `"Hello"`.
-2. Single quotes: `'Hello'`.
-3. Backticks: <code>&#96;Hello&#96;</code>.
+1. Dupli navodnici: `"Hello"`.
+2. Pojedinačni navodnici: `'Hello'`.
+3. Zatvoreni jendostruki navodnik: <code>&#96;Hello&#96;</code>.
 
-Double and single quotes are "simple" quotes. There's no difference between them in JavaScript.
+Dupli i pojedinačni navodnici su "jednostavni" citati. Nema razlike među njima u JavaScript-u.
 
-Backticks are "extended functionality" quotes. They allow us to embed variables and expressions into a string by wrapping them in `${…}`, for example:
+Zatvoreni jednostruki navodnici su navodnici "proširene funkcionalnosti". Omogućuju nam da uklopimo varijable i izraze u niz omotajući ih, na primer, „$ {…}“
 
 ```js run
 let name = "John";
@@ -92,19 +92,19 @@ alert( `Hello, *!*${name}*/!*!` ); // Hello, John!
 alert( `the result is *!*${1 + 2}*/!*` ); // the result is 3
 ```
 
-The expression inside `${…}` is evaluated and the result becomes a part of the string. We can put anything in there: a variable like `name` or an arithmetical expression like `1 + 2` or something more complex.
+Ekspresija unutar `$ {...}` se procjenjuje i rezultat postaje deo niza. Tamo možemo staviti bilo šta: varijablu poput „name“ ili aritmetički izraz poput „1 + 2“ ili nešto složenije.
 
-Please note that this can only be done in backticks. Other quotes don't have this embedding functionality!
+Imajte na umu da se to može učiniti samo jednostrukom navodnicima. Ostale ponude nemaju ovu funkciju ugradnje!
 ```js run
-alert( "the result is ${1 + 2}" ); // the result is ${1 + 2} (double quotes do nothing)
+alert( "Rezultat je ${1 + 2}" ); // Rezultat je ${1 + 2} (Dupli navodnici ne rade ništa)
 ```
 
-We'll cover strings more thoroughly in the chapter <info:string>.
+Detaljnije ćemo prikazati stringove u ovom poglavlju <info:string>.
 
-```smart header="There is no *character* type."
-In some languages, there is a special "character" type for a single character. For example, in the C language and in Java it is `char`.
+```smart header="Nema tip *karaktera*."
+U nekim jezicima postoji poseban tip „karaktera“ za jedan karakter. Na primjer, na jeziku C i na Javi to je `char`.
 
-In JavaScript, there is no such type. There's only one type: `string`. A string may consist of only one character or many of them.
+U JavaScript-u ne postoji takva vrsta. Postoji samo jedna vrsta: `string`. String se može sastojati od samo jednog znaka ili više njih.
 ```
 
 ## A boolean (logical type)
