@@ -5,7 +5,11 @@ Ova knjiga je *tutorial*. Cilj mu je da vam pomogne da postepeno naučite jezik.
 
 ## Specifikacije
 
+<<<<<<< HEAD
 **ECMA-262 specifikacija** sadrži najdublje, detaljne i formalizovane informacije o JavaScript-u. Definiše jezik.
+=======
+[The ECMA-262 specification](https://www.ecma-international.org/publications/standards/Ecma-262.htm) contains the most in-depth, detailed and formalized information about JavaScript. It defines the language.
+>>>>>>> c4d1987ebc470b30c234dbde6fac6e77b7509927
 
 Ali kako je to formalizovano, u početku je teško razumeti. Dakle, ako vam je potreban najpouzdaniji izvor informacija o detaljima jezika, specifikacija je pravo mesto. Ali nije za svakodnevnu upotrebu.
 
