@@ -12,7 +12,11 @@ Varijable se koriste za čuvanje ovih informacija.
 
 Da biste kreirali promenljivu u JavaScript, koristi se `let` riječ.
 
+<<<<<<< HEAD
 Iskaz ispod kreira varijablu sa imenom "poruka":
+=======
+The statement below creates (in other words: *declares*) a variable with the name "message":
+>>>>>>> 3dd8ca09c1a7ed7a7b04eefc69898559902478e1
 
 ```js
 let poruka;
