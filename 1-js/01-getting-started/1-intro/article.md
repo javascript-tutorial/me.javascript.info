@@ -12,8 +12,13 @@ Skripte se pružaju i izvode u obliku običnog teksta. Za pokretanje im nisu pot
 
 U ovom aspektu, JavaScript se veoma razlikuje od drugog jezika koji se zove [Java](https://en.wikipedia.org/wiki/Java_(programming_language)).
 
+<<<<<<< HEAD
 ```smart header="Zašto <u>Java</u>Script?"
 Kada je kreiran JavaScript, u početku je imao drugo ime: "LiveScript". Ali Java je u to vreme bila veoma popularna, pa je odlučeno da će pozicioniranje novog jezika Java-ovog „mlađeg brata“
+=======
+```smart header="Why is it called <u>Java</u>Script?"
+When JavaScript was created, it initially had another name: "LiveScript". But Java was very popular at that time, so it was decided that positioning a new language as a "younger brother" of Java would help.
+>>>>>>> 70ca842bef2390bc26d13dea2b856838aa890fe0
 
 Ali kako se razvijao, JavaScript je postao potpuno nezavisan jezik sa sopstvenom specifikacijom [ECMAScript](http://en.wikipedia.org/wiki/ECMAScript), a sada uopšte nema veze sa Javom.
 ```
