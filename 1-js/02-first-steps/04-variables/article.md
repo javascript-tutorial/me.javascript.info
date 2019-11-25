@@ -12,7 +12,11 @@ Varijable se koriste za čuvanje ovih informacija.
 
 Da biste kreirali promenljivu u JavaScript, koristi se `let` riječ.
 
+<<<<<<< HEAD
 Iskaz ispod kreira varijablu sa imenom "poruka":
+=======
+The statement below creates (in other words: *declares*) a variable with the name "message":
+>>>>>>> 79417c6e73645d37f184f0cc7e4bc3353e85224f
 
 ```js
 let poruka;
@@ -239,7 +243,11 @@ Da se deklariše konstantna (nepromjenjiva) varijabla, koristi `const` umjesto `
 const mojRođendan = '18.04.1982';
 ```
 
+<<<<<<< HEAD
 Varijable deklarisane pomoću `const` nazivaju se" konstante ". Oni se ne mogu promeniti. Pokušaj da to učinite izazvao bi grešku:
+=======
+Variables declared using `const` are called "constants". They cannot be reassigned. An attempt to do so would cause an error:
+>>>>>>> 79417c6e73645d37f184f0cc7e4bc3353e85224f
 
 ```js run
 const mojRođendan = '18.04.1982';
@@ -293,7 +301,11 @@ Drugim rečima, konstante sa velikim slovima koriste se samo kao pseudonimi za "
 
 Kada govorimo o varijablama, postoji još jedna izuzetno važna stvar.
 
+<<<<<<< HEAD
 Ime varijable trebalo bi da ima čisto, očigledno značenje, opisuje podatke koje pohranjuje.
+=======
+A variable name should have a clean, obvious meaning, describing the data that it stores.
+>>>>>>> 79417c6e73645d37f184f0cc7e4bc3353e85224f
 
 Imenovanje varijable je jedna od najvažnijih i najkompleksnijih vještina u programiranju. Brzi pogled na imena varijabli može otkriti koji je kod napisao početnik nasuprot iskusnom programeru.
 
