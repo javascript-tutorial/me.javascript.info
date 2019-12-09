@@ -12,8 +12,13 @@ Skripte se pružaju i izvode u obliku običnog teksta. Za pokretanje im nisu pot
 
 U ovom aspektu, JavaScript se veoma razlikuje od drugog jezika koji se zove [Java](https://en.wikipedia.org/wiki/Java_(programming_language)).
 
+<<<<<<< HEAD
 ```smart header="Zašto <u>Java</u>Script?"
 Kada je kreiran JavaScript, u početku je imao drugo ime: "LiveScript". Ali Java je u to vreme bila veoma popularna, pa je odlučeno da će pozicioniranje novog jezika Java-ovog „mlađeg brata“
+=======
+```smart header="Why is it called <u>Java</u>Script?"
+When JavaScript was created, it initially had another name: "LiveScript". But Java was very popular at that time, so it was decided that positioning a new language as a "younger brother" of Java would help.
+>>>>>>> 5b195795da511709faf79a4d35f9c5623b6dbdbd
 
 Ali kako se razvijao, JavaScript je postao potpuno nezavisan jezik sa sopstvenom specifikacijom [ECMAScript](http://en.wikipedia.org/wiki/ECMAScript), a sada uopšte nema veze sa Javom.
 ```
@@ -38,7 +43,11 @@ Motori su komplikovani. Ali osnove su jednostavne.
 2. Zatim pretvara ("kompajlira") skriptu u mašinski jezik.
 3. A onda mašinski kod radi prilično brzo.
 
+<<<<<<< HEAD
 Motor primenjuje optimizacije na svakom koraku procesa. Čak posmatra sastavljenu skriptu dok radi, analizira podatke koji prolaze kroz nju i primenjuje optimizacije na mašinskom kodu na osnovu tog znanja. Kada je gotov, skripte se pokreću prilično brzo.
+=======
+The engine applies optimizations at each step of the process. It even watches the compiled script as it runs, analyzes the data that flows through it, and further optimizes the machine code based on that knowledge.
+>>>>>>> 5b195795da511709faf79a4d35f9c5623b6dbdbd
 ```
 
 ## Šta JavaScript u internet pretraživaču može da radi?
