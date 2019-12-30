@@ -61,7 +61,11 @@ Komentari pre i posle skripte.
     //--></script>
     ```
 
+<<<<<<< HEAD
     Ovaj trik se ne koristi u savremenom JavaScript-u. Ovi komentari su sakrili JavaScript kod od starih pretraživača koji nisu znali kako da to obrade `<script>` tag. Budući da pregledači objavljeni u poslednjih 15 godina nemaju ovaj problem, ova vrsta komentara može vam pomoći da identifikujete zaista stari kod.
+=======
+    This trick isn't used in modern JavaScript. These comments hide JavaScript code from old browsers that didn't know how to process the `<script>` tag. Since browsers released in the last 15 years don't have this issue, this kind of comment can help you identify really old code.
+>>>>>>> 28ed5a3f7df9e015cf81c126423c76c9408d7117
 
 
 ## Spoljne skripte
