@@ -43,7 +43,11 @@ Gore se mogu pojaviti samo komentari `"use strict"`.
 ```warn header="Nema načina da otkažete `use strict`"
 Ne postoji takva direktiva `"no use strict"` koja vraća motor na staro ponašanje.
 
+<<<<<<< HEAD
 Jednom kada uđemo u strogi režim, nema povratka.
+=======
+Once we enter strict mode, there's no going back.
+>>>>>>> ff042a03191dfad1268219ae78758193a5803b38
 ```
 
 ## Konzola pregledača
