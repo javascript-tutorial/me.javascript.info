@@ -98,7 +98,11 @@ Ali to bi trebalo biti dva odvojena iskaza, ne jedan. Takvo spajanje u ovom slu�
 
 Preporučujemo stavljanje tačke-zareza između izjava, čak i ako su razdvojene novim linijama. Ovo pravilo široko prihvata zajednica. Napomenimo još jednom - *moguće je* izostavljati tačku-zarez većinu vremena. Ali sigurnije je - posebno za početnike - koristiti ih.
 
+<<<<<<< HEAD
 ## Komentari
+=======
+## Comments [#code-comments]
+>>>>>>> 9acc1302a14a3bbabbc9bf95d04581094bd0f1a8
 
 Kako vrijeme prolazi, programi postaju sve složeniji. Potrebno je dodati *komentare* koji opisuju šta kod radi i zašto.
 
