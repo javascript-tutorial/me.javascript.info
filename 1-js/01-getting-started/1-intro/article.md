@@ -4,7 +4,11 @@ Pogledajmo šta je tako posebno u JavaScriptu, šta možemo postići sa njim i 
 
 ## Šta je JavaScript ?
 
+<<<<<<< HEAD
 *JavaScript* je prvobitno kreiran kako bi *"oživio web stranice"*.
+=======
+*JavaScript* was initially created to "make web pages alive".
+>>>>>>> c3a11c85e54153ebb137b5541b1d1f751c804439
 
 Programi na ovom jeziku se nazivaju *skripte*. Mogu se napisati pravo u HTML-u veb stranice i pokrenuti automatski kada se stranica učita.
 
@@ -12,8 +16,13 @@ Skripte se pružaju i izvode u obliku običnog teksta. Za pokretanje im nisu pot
 
 U ovom aspektu, JavaScript se veoma razlikuje od drugog jezika koji se zove [Java](https://en.wikipedia.org/wiki/Java_(programming_language)).
 
+<<<<<<< HEAD
 ```smart header="Zašto <u>Java</u>Script?"
 Kada je kreiran JavaScript, u početku je imao drugo ime: "LiveScript". Ali Java je u to vreme bila veoma popularna, pa je odlučeno da će pozicioniranje novog jezika Java-ovog „mlađeg brata“
+=======
+```smart header="Why is it called <u>Java</u>Script?"
+When JavaScript was created, it initially had another name: "LiveScript". But Java was very popular at that time, so it was decided that positioning a new language as a "younger brother" of Java would help.
+>>>>>>> c3a11c85e54153ebb137b5541b1d1f751c804439
 
 Ali kako se razvijao, JavaScript je postao potpuno nezavisan jezik sa sopstvenom specifikacijom [ECMAScript](http://en.wikipedia.org/wiki/ECMAScript), a sada uopšte nema veze sa Javom.
 ```
@@ -38,7 +47,11 @@ Motori su komplikovani. Ali osnove su jednostavne.
 2. Zatim pretvara ("kompajlira") skriptu u mašinski jezik.
 3. A onda mašinski kod radi prilično brzo.
 
+<<<<<<< HEAD
 Motor primenjuje optimizacije na svakom koraku procesa. Čak posmatra sastavljenu skriptu dok radi, analizira podatke koji prolaze kroz nju i primenjuje optimizacije na mašinskom kodu na osnovu tog znanja. Kada je gotov, skripte se pokreću prilično brzo.
+=======
+The engine applies optimizations at each step of the process. It even watches the compiled script as it runs, analyzes the data that flows through it, and further optimizes the machine code based on that knowledge.
+>>>>>>> c3a11c85e54153ebb137b5541b1d1f751c804439
 ```
 
 ## Šta JavaScript u internet pretraživaču može da radi?
@@ -63,7 +76,11 @@ Mogućnosti JavaScripta u pretraživaču su ograničene zbog bezbednosti korisn
 
 Primeri takvih ograničenja uključuju:
 
+<<<<<<< HEAD
 - JavaScript na veb stranici možda ne može čitati / pisati proizvoljne datoteke na hard disku, kopirati ih ili izvršavati programe. Nema direktan pristup funkcijama sistema OS.
+=======
+- JavaScript on a webpage may not read/write arbitrary files on the hard disk, copy them or execute programs. It has no direct access to OS functions.
+>>>>>>> c3a11c85e54153ebb137b5541b1d1f751c804439
 
     Savremeni pregledači omogućavaju mu da radi sa datotekama, ali je pristup ograničen i pruža se samo ako korisnik izvrši određene radnje, poput „puštanja“ datoteke u prozor pregledača ili izbora pomoću „<input>“ taga.
 
