@@ -5,11 +5,19 @@ Ova knjiga je *tutorial*. Cilj mu je da vam pomogne da postepeno naučite jezik.
 
 ## Specifikacije
 
+<<<<<<< HEAD
 **ECMA-262 specifikacija** sadrži najdublje, detaljne i formalizovane informacije o JavaScript-u. Definiše jezik.
+=======
+[The ECMA-262 specification](https://www.ecma-international.org/publications/standards/Ecma-262.htm) contains the most in-depth, detailed and formalized information about JavaScript. It defines the language.
+>>>>>>> 99e59ba611ab11319ef9d0d66734b0bea2c3f058
 
 Ali kako je to formalizovano, u početku je teško razumeti. Dakle, ako vam je potreban najpouzdaniji izvor informacija o detaljima jezika, specifikacija je pravo mesto. Ali nije za svakodnevnu upotrebu.
 
+<<<<<<< HEAD
 Najnoviji nacrt je u <https://tc39.es/ecma262/>.
+=======
+A new specification version is released every year. In-between these releases, the latest specification draft is at <https://tc39.es/ecma262/>.
+>>>>>>> 99e59ba611ab11319ef9d0d66734b0bea2c3f058
 
 Da biste pročitali nove funkcije 'krvarenja ivice', uključujući one koje su „skoro standardne“ (tzv. „Faza 3“), pogledajte predloge na <https://github.com/tc39/proposals>.
 
