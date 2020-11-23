@@ -9,7 +9,11 @@ Prvo, da vidimo kako prikačiti skriptu na web stranicu. Za okruženja na strani
 
 ## "script" tag
 
+<<<<<<< HEAD
 JavaScript programi se mogu ubaciti u bilo koji deo HTML dokumenta uz pomoć `<script>` taga.
+=======
+JavaScript programs can be inserted almost anywhere into an HTML document using the `<script>` tag.
+>>>>>>> 23da191b58643387783f38e999f5b05be87d3d93
 
 Na primjer :
 
@@ -45,8 +49,13 @@ Primer možete pokrenuti klikom na dugme „Play“ u gornjem desnom uglu gornje
 
 `<script>` tag ima nekoliko atributa koji se danas retko koriste, ali se još uvek mogu naći u starom kodu:
 
+<<<<<<< HEAD
 `type` atribut: <code>&lt;script <u>type</u>=...&gt;</code>
 : Stari HTML standard, HTML4, zahtevao je skriptu da sadrži `type`. Obično je to bilo `type="text/javascript"`. To više nije potrebno. Takođe, savremeni HTML standard potpuno je promenio značenje ovog atributa. Sada se može koristiti za JavaScript module. Ali to je napredna tema; razgovaraćemo o modulima u drugom delu udžbenika.
+=======
+The `type` attribute: <code>&lt;script <u>type</u>=...&gt;</code>
+: The old HTML standard, HTML4, required a script to have a `type`. Usually it was `type="text/javascript"`. It's not required anymore. Also, the modern HTML standard totally changed the meaning of this attribute. Now, it can be used for JavaScript modules. But that's an advanced topic, we'll talk about modules in another part of the tutorial.
+>>>>>>> 23da191b58643387783f38e999f5b05be87d3d93
 
 
 `language` atribut: <code>&lt;script <u>language</u>=...&gt;</code>
@@ -61,7 +70,11 @@ Komentari pre i posle skripte.
     //--></script>
     ```
 
+<<<<<<< HEAD
     Ovaj trik se ne koristi u savremenom JavaScript-u. Ovi komentari su sakrili JavaScript kod od starih pretraživača koji nisu znali kako da to obrade `<script>` tag. Budući da pregledači objavljeni u poslednjih 15 godina nemaju ovaj problem, ova vrsta komentara može vam pomoći da identifikujete zaista stari kod.
+=======
+    This trick isn't used in modern JavaScript. These comments hide JavaScript code from old browsers that didn't know how to process the `<script>` tag. Since browsers released in the last 15 years don't have this issue, this kind of comment can help you identify really old code.
+>>>>>>> 23da191b58643387783f38e999f5b05be87d3d93
 
 
 ## Spoljne skripte
@@ -79,7 +92,7 @@ Ovdje , `/put/do/skripta.js` je apsolutni put do skripte iz korena mesta. Takođ
 Takođe možemo dati punu URL adresu. Na primer:
 
 ```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js"></script>
 ```
 
 Da biste dodali nekoliko skripti, koristite više tagova:
