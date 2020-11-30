@@ -31,7 +31,12 @@ U praksi, lagani urednici mogu imati puno dodataka, uključujući analizatore s
 
 Sledeće opcije zaslužuju vašu pažnju:
 
+<<<<<<< HEAD
 - [Atom](https://atom.io/) (cross-platform, besplatan).
+=======
+- [Atom](https://atom.io/) (cross-platform, free).
+- [Visual Studio Code](https://code.visualstudio.com/) (cross-platform, free).
+>>>>>>> e1a3f634a47c119cf1ec7420c49fc0fc7172c0b5
 - [Sublime Text](http://www.sublimetext.com) (cross-platform, shareware).
 - [Notepad++](https://notepad-plus-plus.org/) (Windows, besplatan).
 - [Vim](http://www.vim.org/) i [Emacs](https://www.gnu.org/software/emacs/) takođe su cool ako ih znate koristiti.
