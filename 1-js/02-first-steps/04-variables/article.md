@@ -12,7 +12,11 @@ Varijable se koriste za čuvanje ovih informacija.
 
 Da biste kreirali promenljivu u JavaScript, koristi se `let` riječ.
 
+<<<<<<< HEAD
 Iskaz ispod kreira varijablu sa imenom "poruka":
+=======
+The statement below creates (in other words: *declares*) a variable with the name "message":
+>>>>>>> 3a0b3f4e31d4c4bbe90ed4c9c6e676a888ad8311
 
 ```js
 let poruka;
@@ -80,9 +84,14 @@ let korisnik = 'Veljko'
 
 Tehnički, sve ove varijante rade istu stvar. Dakle, to je stvar ličnog ukusa i estetike.
 
+<<<<<<< HEAD
 
 ````smart header="`var` umjesto `let`"
 U starijim skriptama možete naći i drugu ključnu reč: `var` umjesto `let`:
+=======
+````smart header="`var` instead of `let`"
+In older scripts, you may also find another keyword: `var` instead of `let`:
+>>>>>>> 3a0b3f4e31d4c4bbe90ed4c9c6e676a888ad8311
 
 ```js
 *!*var*/!* poruka = 'Zdravo';
@@ -136,8 +145,27 @@ alert(zdravo); // Zdravo svijete!
 alert(poruka); // Zdravo svijete!
 ```
 
+<<<<<<< HEAD
 ```smart header="Funkcionalni jezici"
 Zanimljivo je primijetiti da postoje [funkcionalni](https://en.wikipedia.org/wiki/Functional_programming) programski jezici, kao [Scala](http://www.scala-lang.org/) ili [Erlang](http://www.erlang.org/) koje zabranjuju promenu vrednosti varijabli.
+=======
+````warn header="Declaring twice triggers an error"
+A variable should be declared only once.
+
+A repeated declaration of the same variable is an error:
+
+```js run
+let message = "This";
+
+// repeated 'let' leads to an error
+let message = "That"; // SyntaxError: 'message' has already been declared
+```
+So, we should declare a variable once and then refer to it without `let`.
+````
+
+```smart header="Functional languages"
+It's interesting to note that there exist [functional](https://en.wikipedia.org/wiki/Functional_programming) programming languages, like [Scala](http://www.scala-lang.org/) or [Erlang](http://www.erlang.org/) that forbid changing variable values.
+>>>>>>> 3a0b3f4e31d4c4bbe90ed4c9c6e676a888ad8311
 
 U takvim jezicima, jednom kada se vrijednost čuva „u kutiji“, to je zauvjek. Ako treba da spremimo nešto drugo, jezik nas prisiljava da stvorimo novi okvir (deklarišemo novu varijablu). Ne možemo ponovo da koristimo staru.
 
@@ -192,7 +220,11 @@ let имя = '...';
 let 我 = '...';
 ```
 
+<<<<<<< HEAD
 Tehnički, ovde nema greške, takva su imena dozvoljena, ali postoji međunarodna tradicija da se engleski koriste u imenima varijabli. Čak i ako pišemo malu skriptu, pred nama je možda dug život. Ljudi iz drugih zemalja možda će trebati da je pročitaju neko vreme.
+=======
+Technically, there is no error here. Such names are allowed, but there is an international convention to use English in variable names. Even if we're writing a small script, it may have a long life ahead. People from other countries may need to read it some time.
+>>>>>>> 3a0b3f4e31d4c4bbe90ed4c9c6e676a888ad8311
 ````
 
 ````warn header="Rezervisana imena"
@@ -239,7 +271,11 @@ Da se deklariše konstantna (nepromjenjiva) varijabla, koristi `const` umjesto `
 const mojRođendan = '18.04.1982';
 ```
 
+<<<<<<< HEAD
 Varijable deklarisane pomoću `const` nazivaju se" konstante ". Oni se ne mogu promeniti. Pokušaj da to učinite izazvao bi grešku:
+=======
+Variables declared using `const` are called "constants". They cannot be reassigned. An attempt to do so would cause an error:
+>>>>>>> 3a0b3f4e31d4c4bbe90ed4c9c6e676a888ad8311
 
 ```js run
 const mojRođendan = '18.04.1982';
@@ -293,7 +329,11 @@ Drugim rečima, konstante sa velikim slovima koriste se samo kao pseudonimi za "
 
 Kada govorimo o varijablama, postoji još jedna izuzetno važna stvar.
 
+<<<<<<< HEAD
 Ime varijable trebalo bi da ima čisto, očigledno značenje, opisuje podatke koje pohranjuje.
+=======
+A variable name should have a clean, obvious meaning, describing the data that it stores.
+>>>>>>> 3a0b3f4e31d4c4bbe90ed4c9c6e676a888ad8311
 
 Imenovanje varijable je jedna od najvažnijih i najkompleksnijih vještina u programiranju. Brzi pogled na imena varijabli može otkriti koji je kod napisao početnik nasuprot iskusnom programeru.
 
