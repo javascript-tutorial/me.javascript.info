@@ -8,7 +8,11 @@ Da biste videli greške i dobili puno drugih korisnih informacija o skriptama, �
 
 Većina programera za razvoj se naginje na Chrome ili Firefox jer ti pregledači imaju najbolje alate za programere. Ostali pregledači takođe nude alate za programere, ponekad i posebne funkcije, ali obično se igraju „nadoknadu“ za Chrome ili Firefok. Tako većina programera ima "omiljeni" pregledač i prelaze na druge ako je problem specifičan za pretraživač.
 
+<<<<<<< HEAD
 Alati za programere su snažni; imaju mnogo funkcija. Za početak ćemo naučiti kako da ih otvorimo, pogledati greške i pokrenuti JavaScript komande.
+=======
+Developer tools are potent, they have many features. To start, we'll learn how to open them, look at errors, and run JavaScript commands.
+>>>>>>> e01998baf8f85d9d6cef9f1add6c81b901f16d69
 
 ## Gugl Chrome
 
@@ -29,10 +33,19 @@ Tačan izgled alata za programere zavisi od verzije Chrome-a. Povremeno se menja
 - Ovde možemo videti poruku o grešci u crvenoj boji. U ovom slučaju, skripta sadrži nepoznatu komandu "lalala".
 - Sa desne strane postoji veza na koju se može kliknuti na izvor `bug.html: 12` sa brojem linije na kojoj je došlo do greške.
 
+<<<<<<< HEAD
 Ispod poruke o grešci nalazi se plavi simbol ">". Označava „komandnu liniju“ u koju možemo otkucati JavaScript komande. Pretisni `taster:Enter` da ih pokreneš (`taster:Shift+Enter` za unos višerednih komandi).
+=======
+Below the error message, there is a blue `>` symbol. It marks a "command line" where we can type JavaScript commands. Press `key:Enter` to run them.
+>>>>>>> e01998baf8f85d9d6cef9f1add6c81b901f16d69
 
 Sada možemo videti greške, a to je dovoljno za početak. Kasnije ćemo se vratiti alatima za razvojne programere i detaljnije ćemo pokloniti pogrešku u ovom poglavlju <info:debugging-chrome>.
 
+```smart header="Multi-line input"
+Usually, when we put a line of code into the console, and then press `key:Enter`, it executes.
+
+To insert multiple lines, press `key:Shift+Enter`. This way one can enter long fragments of JavaScript code.
+```
 
 ## Firefox, Edge, i ostali
 
@@ -50,6 +63,7 @@ Otvorite Postavke i idite na okno „Napredno“. Na dnu je potvrdni okvir:
 
 Sada `taster:Cmd+Opt+C` može prebaciti konzolu. Takođe, imajte na umu da se pojavila nova stavka gornjeg menija pod nazivom „Develop“. Ima mnogo komandi i opcija.
 
+<<<<<<< HEAD
 ```smart header="Više-linijski ulaz"
 Obično kada stavimo liniju koda u konzolu, a zatim pritisnemo `taster: Enter`, izvršava se.
 
@@ -57,6 +71,9 @@ Da biste umetnuli više linija, pritisnite `taster:Shift+Enter`. Na ovaj način 
 ```
 
 ## Rezime
+=======
+## Summary
+>>>>>>> e01998baf8f85d9d6cef9f1add6c81b901f16d69
 
 - Alatke za programere omogućavaju nam da vidimo greške, izvršavamo komande, ispitujemo promenljive i još mnogo toga.
 - Mogu se otvoriti sa `taster:F12` za većinu pregledača u operativnom sistemu Windows. Chrome za Mac treba `taster:Cmd+Opt+J`, Safari: `taster:Cmd+Opt+C` (prvo treba da se omogući).

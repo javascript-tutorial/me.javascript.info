@@ -98,7 +98,11 @@ Ali to bi trebalo biti dva odvojena iskaza, ne jedan. Takvo spajanje u ovom slu�
 
 Preporučujemo stavljanje tačke-zareza između izjava, čak i ako su razdvojene novim linijama. Ovo pravilo široko prihvata zajednica. Napomenimo još jednom - *moguće je* izostavljati tačku-zarez većinu vremena. Ali sigurnije je - posebno za početnike - koristiti ih.
 
+<<<<<<< HEAD
 ## Komentari
+=======
+## Comments [#code-comments]
+>>>>>>> e01998baf8f85d9d6cef9f1add6c81b901f16d69
 
 Kako vrijeme prolazi, programi postaju sve složeniji. Potrebno je dodati *komentare* koji opisuju šta kod radi i zašto.
 
@@ -138,8 +142,13 @@ alert('Zdravo');
 alert('Svijete');
 ```
 
+<<<<<<< HEAD
 ```smart header="Korišćenje tastera za prečice!"
 U većini urednika koda se može komentarisati pritiskom na `taster:Ctrl+/` za jednolinijski komentar i nešto slično `taster:Ctrl+Shift+/` -- za komentare sa više linija (izaberite deo koda i pritisnite taster). Probajte za Mac računare `taster:Cmd` umjesto `taster:Ctrl`.
+=======
+```smart header="Use hotkeys!"
+In most editors, a line of code can be commented out by pressing the `key:Ctrl+/` hotkey for a single-line comment and something like `key:Ctrl+Shift+/` -- for multiline comments (select a piece of code and press the hotkey). For Mac, try `key:Cmd` instead of `key:Ctrl` and `key:Option` instead of `key:Shift`.
+>>>>>>> e01998baf8f85d9d6cef9f1add6c81b901f16d69
 ```
 
 ````warn header="Uneseni komentari nisu podržani!"
