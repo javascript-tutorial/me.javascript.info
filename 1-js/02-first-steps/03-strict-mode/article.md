@@ -19,8 +19,12 @@ Na primjer:
 ...
 ```
 
+<<<<<<< HEAD
 Uskoro ćemo naučiti funkcije (način za grupisanje komandi). Gledajući napred, uzmimo to u obzir `"use strict"` može se staviti na početak tela funkcije umesto celog skripta. To omogućava strogi režim samo u toj funkciji. Ali obično ga ljudi koriste za cijelu skriptu.
 
+=======
+Quite soon we're going to learn functions (a way to group commands), so let's note in advance that `"use strict"` can be put at the beginning of a function. Doing that enables strict mode in that function only. But usually people use it for the whole script.
+>>>>>>> 4541b7af7584014a676da731f6e8774da5e059f6
 
 ````warn header="Obezbijedi da je \"use strict\" na vrhu"
 Obavezno proverite da li se „use strict“ nalazi na vrhu vaše skripte, jer u suprotnom strogi režim možda neće biti omogućen.
@@ -43,16 +47,30 @@ Gore se mogu pojaviti samo komentari `"use strict"`.
 ```warn header="Nema načina da otkažete `use strict`"
 Ne postoji takva direktiva `"no use strict"` koja vraća motor na staro ponašanje.
 
+<<<<<<< HEAD
 Jednom kada uđemo u strogi režim, nema povratka.
+=======
+Once we enter strict mode, there's no going back.
+>>>>>>> 4541b7af7584014a676da731f6e8774da5e059f6
 ```
 
 ## Konzola pregledača
 
+<<<<<<< HEAD
 Kada za testiranje funkcija koristite konzolu pregledača za ubuduće, imajte na umu da to nema `use strict` podrazumijevano.
+=======
+When you use a [developer console](info:devtools) to run code, please note that it doesn't `use strict` by default.
+>>>>>>> 4541b7af7584014a676da731f6e8774da5e059f6
 
 Ponekad, kada `use strict` čini razliku, dobićete pogrešne rezultate.
 
+<<<<<<< HEAD
 Možete da pokušate da pritisnete `taster:Shift+Enter` da unesete više redova i stavite „use strict“ na vrh, ovako:
+=======
+So, how to actually `use strict` in the console?
+
+First, you can try to press `key:Shift+Enter` to input multiple lines, and put `use strict` on top, like this:
+>>>>>>> 4541b7af7584014a676da731f6e8774da5e059f6
 
 ```js
 'use strict'; <Shift+Enter za novi red>
@@ -62,12 +80,17 @@ Možete da pokušate da pritisnete `taster:Shift+Enter` da unesete više redova 
 
 Radi u većini pregledača, naime Firefox i Chrome.
 
+<<<<<<< HEAD
 Ako ne, najpouzdaniji način da to osigurate `use strict` bilo bi da unesete kod u konzolu ovako:
+=======
+If it doesn't, e.g. in an old browser, there's an ugly, but reliable way to ensure `use strict`. Put it inside this kind of wrapper:
+>>>>>>> 4541b7af7584014a676da731f6e8774da5e059f6
 
 ```js
 (function() {
   'use strict';
 
+<<<<<<< HEAD
   // ...tvoj kod...
 })()
 ```
@@ -84,3 +107,24 @@ Za sada je dovoljno znati o tome uopšte:
 2. trogi režim je omogućen postavljanjem `"use strict"` na vrhu skripte ili funkcije. Nekoliko jezičnih funkcija, poput „klase“ i „modula“, automatski omogućuju strogi režim.
 3. Strogi režim podržavaju svi moderni pregledači.
 4. Preporučujemo uvek pokretanje skripti sa `"use strict"`. Svi primjeri u ovom vodiču pretpostavljaju strogi način rada, osim ako (vrlo rijetko) nije drugačije određeno.
+=======
+  // ...your code here...
+})()
+```
+
+## Should we "use strict"?
+
+The question may sound obvious, but it's not so.
+
+One could recommend to start scripts with `"use strict"`... But you know what's cool?
+
+Modern JavaScript supports "classes" and "modules" - advanced language structures (we'll surely get to them), that enable `use strict` automatically. So we don't need to add the `"use strict"` directive, if we use them.
+
+**So, for now `"use strict";` is a welcome guest at the top of your scripts. Later, when your code is all in classes and modules, you may omit it.**
+
+As of now, we've got to know about `use strict` in general.
+
+In the next chapters, as we learn language features, we'll see the differences between the strict and old modes. Luckily, there aren't many and they actually make our lives better.
+
+All examples in this tutorial assume strict mode unless (very rarely) specified otherwise.
+>>>>>>> 4541b7af7584014a676da731f6e8774da5e059f6
