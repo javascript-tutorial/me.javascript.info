@@ -47,7 +47,11 @@ alert(3 +
 + 2);
 ```
 
+<<<<<<< HEAD
 Kod ispisuje `6`, jer JavaScript ovde ne ubacuje tačku-zarez. Intuitivno je očigledno da ako se linija završava sa plus "+" `, onda je to" nepotpun izraz ", pa tačka-zarez nije obavezna. I u ovom slučaju to radi onako kako je planirano.
+=======
+The code outputs `6` because JavaScript does not insert semicolons here. It is intuitively obvious that if the line ends with a plus `"+"`, then it is an "incomplete expression", so a semicolon there would be incorrect. And in this case, that works as intended.
+>>>>>>> 8d04d0d2db97276dbb2b451c30a7bd3e05d65831
 
 
 **Ali postoje situacije u kojima JavaScript „ne uspijeva“ da pretpostavi tačku-zarez tamo gde je stvarno potrebno.
@@ -59,28 +63,43 @@ Greške koje se dešavaju u takvim slučajevima je stvarno teško otkriti i ispr
 Ako ste radoznali da vidite konkretan primer takve greške, pogledajte ovaj kod:
 
 ```js run
-[1, 2].forEach(alert)
+alert("Hello");
+
+[1, 2].forEach(alert);
 ```
 
+<<<<<<< HEAD
 Još nije potrebno razmišljati o značenju zagrada `[]` i `forEach`. Kasnije ćemo ih proučiti. Za sada se samo sjetite rezultata koda: prikazuje "1", a zatim "2".
 
 Sada, dodajmo upozorenje prije koda i *ne* završimo tačkom-zarezom:
 
 ```js run no-beautify
 alert("Ovđe će doći do greške")
+=======
+No need to think about the meaning of the brackets `[]` and `forEach` yet. We'll study them later. For now, just remember the result of running the code: it shows `Hello`, then `1`, then `2`.
 
-[1, 2].forEach(alert)
+Now let's remove the semicolon after the `alert`:
+
+```js run no-beautify
+alert("Hello")
+>>>>>>> 8d04d0d2db97276dbb2b451c30a7bd3e05d65831
+
+[1, 2].forEach(alert);
 ```
 
+<<<<<<< HEAD
 Sada ako pokrenemo kod, prikazuje se samo prvo `upozorenje` i tada imamo grešku!
 
 Ali opet je sve u redu ako nakon `upozorenja` dodamo tačku-zarez:
 ```js run
 alert("Sad je sve u redu!");
+=======
+The difference compared to the code above is only one character: the semicolon at the end of the first line is gone.
+>>>>>>> 8d04d0d2db97276dbb2b451c30a7bd3e05d65831
 
-[1, 2].forEach(alert)  
-```
+If we run this code, only the first `Hello` shows (and there's an error, you may need to open the console to see it). There are no numbers any more.
 
+<<<<<<< HEAD
 Sada imamo poruku "Sve u redu", a zatim slijede "1" i "2".
 
 
@@ -94,11 +113,28 @@ alert("Ovđe će doći do greške!")[1, 2].forEach(alert)
 ```
 
 Ali to bi trebalo biti dva odvojena iskaza, ne jedan. Takvo spajanje u ovom slučaju je upravo pogrešno, otuda i greška. To se može dogoditi i u drugim situacijama.
+=======
+That's because JavaScript does not assume a semicolon before square brackets `[...]`. So, the code in the last example is treated as a single statement.
+
+Here's how the engine sees it:
+
+```js run no-beautify
+alert("Hello")[1, 2].forEach(alert);
+```
+
+Looks weird, right? Such merging in this case is just wrong. We need to put a semicolon after `alert` for the code to work correctly.
+
+This can happen in other situations also.
+>>>>>>> 8d04d0d2db97276dbb2b451c30a7bd3e05d65831
 ````
 
 Preporučujemo stavljanje tačke-zareza između izjava, čak i ako su razdvojene novim linijama. Ovo pravilo široko prihvata zajednica. Napomenimo još jednom - *moguće je* izostavljati tačku-zarez većinu vremena. Ali sigurnije je - posebno za početnike - koristiti ih.
 
+<<<<<<< HEAD
 ## Komentari
+=======
+## Comments [#code-comments]
+>>>>>>> 8d04d0d2db97276dbb2b451c30a7bd3e05d65831
 
 Kako vrijeme prolazi, programi postaju sve složeniji. Potrebno je dodati *komentare* koji opisuju šta kod radi i zašto.
 
@@ -138,8 +174,13 @@ alert('Zdravo');
 alert('Svijete');
 ```
 
+<<<<<<< HEAD
 ```smart header="Korišćenje tastera za prečice!"
 U većini urednika koda se može komentarisati pritiskom na `taster:Ctrl+/` za jednolinijski komentar i nešto slično `taster:Ctrl+Shift+/` -- za komentare sa više linija (izaberite deo koda i pritisnite taster). Probajte za Mac računare `taster:Cmd` umjesto `taster:Ctrl`.
+=======
+```smart header="Use hotkeys!"
+In most editors, a line of code can be commented out by pressing the `key:Ctrl+/` hotkey for a single-line comment and something like `key:Ctrl+Shift+/` -- for multiline comments (select a piece of code and press the hotkey). For Mac, try `key:Cmd` instead of `key:Ctrl` and `key:Option` instead of `key:Shift`.
+>>>>>>> 8d04d0d2db97276dbb2b451c30a7bd3e05d65831
 ```
 
 ````warn header="Uneseni komentari nisu podržani!"
