@@ -1,10 +1,10 @@
-importance: 5
+važnost: 5
 
 ---
 
-# String quotes
+# Navodnici kod stringova
 
-What is the output of the script?
+Šta je rezultat ove skripte?
 
 ```js
 let name = "Ilya";
