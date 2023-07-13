@@ -107,60 +107,60 @@ U nekim jezicima postoji poseban tip „karaktera“ za jedan karakter. Na primj
 U JavaScript-u ne postoji takva vrsta. Postoji samo jedna vrsta: `string`. String se može sastojati od samo jednog znaka ili više njih.
 ```
 
-## A boolean (logical type)
+## Boolean (logički tip podatka)
 
-The boolean type has only two values: `true` and `false`.
+Boolean tip podatka ima samo dvije vrijednosti: `true` i `false`.
 
-This type is commonly used to store yes/no values: `true` means "yes, correct", and `false` means "no, incorrect".
+Ovaj tip podatka se najčešće koristi da čuva da/ne vrijednosti: `true` znači "da, tačno", a `false` znači "ne, netačno".
 
-For instance:
+Na primjer:
 
 ```js
-let nameFieldChecked = true; // yes, name field is checked
-let ageFieldChecked = false; // no, age field is not checked
+let nameFieldChecked = true; // da, polje za ime je čekirano
+let ageFieldChecked = false; // ne, polje za godine nije čekirano
 ```
 
-Boolean values also come as a result of comparisons:
+Boolean vrijednosti takođe dolaze kao rezultat poređenja:
 
 ```js run
 let isGreater = 4 > 1;
 
-alert( isGreater ); // true (the comparison result is "yes")
+alert( isGreater ); // true (rezultat poređenja je "da")
 ```
 
-We'll cover booleans more deeply in the chapter <info:logical-operators>.
+Boolean ćemo raditi detaljnije u poglavlju <info:logical-operators>.
 
-## The "null" value
+## "null" vrijednost
 
-The special `null` value does not belong to any of the types described above.
+Specijalna vrijednost `null` ne pripada niti jednom tipu koje je gore opisan.
 
-It forms a separate type of its own which contains only the `null` value:
+Formirati se posebni tip koji sadrži samo `null` vrijednost:
 
 ```js
 let age = null;
 ```
 
-In JavaScript, `null` is not a "reference to a non-existing object" or a "null pointer" like in some other languages.
+Kod JavaScript-a, `null` nije "referenca na nepostojeći objekat" ili "null pokazivač" kao u nekim drugim programskim jezicima.
 
-It's just a special value which represents "nothing", "empty" or "value unknown".
+To je samo specijalna vrijednost koja predstavlja "ništa", "prazno" ili "nepoznatu vrijednost".
 
-The code above states that `age` is unknown or empty for some reason.
+Gornji kod navodi da je varijabla `age` nepoznata ili prazna iz nekog razloga.
 
-## The "undefined" value
+## "undefined" vrijednost
 
-The special value `undefined` also stands apart. It makes a type of its own, just like `null`.
+Specijalna vrijednost `undefined` se takođe nezavisno razmatra. Sama po sebi je tip, isto kao `null`.
 
-The meaning of `undefined` is "value is not assigned".
+Značenje `undefined` je "vrijednost nije dodijeljena".
 
-If a variable is declared, but not assigned, then its value is `undefined`:
+Ako je varijabla deklarisana, ali joj vrijednost nije dodijeljena, onda je vrijednost te varijable `undefined`:
 
 ```js run
 let x;
 
-alert(x); // shows "undefined"
+alert(x); // prikazuje "undefined"
 ```
 
-Technically, it is possible to assign `undefined` to any variable:
+Tehnički, moguće je dodijeliti `undefined` bilo kojoj varijabli:
 
 ```js run
 let x = 123;
@@ -170,28 +170,28 @@ x = undefined;
 alert(x); // "undefined"
 ```
 
-...But we don't recommend doing that. Normally, we use `null` to assign an "empty" or "unknown" value to a variable, and we use `undefined` for checks like seeing if a variable has been assigned.
+...Ali to nije preporučljivo da se radi. Najčešće, koristimo `null` da dodijelimo "praznu" ili "nepoznatu" vrijednost varijabli, a `undefined` koristimo za provjeru da li je vrijednsot nekoj varijabli dodijeljena.
 
-## Objects and Symbols
+## Objekti i Simboli and Symbols
 
-The `object` type is special.
+Tip `object` je specijalni tip.
 
-All other types are called "primitive" because their values can contain only a single thing (be it a string or a number or whatever). In contrast, objects are used to store collections of data and more complex entities. We'll deal with them later in the chapter <info:object> after we learn more about primitives.
+Svi ostali tipovi se zovu "primitivni" zbog toga što su vrijednosti kod tih tipova sadrže samo jednu stvar (bio to string ili broj ili štagod). U kontrastu, objekti se koriste da čuvaju kolekciju podataka i kompleksije entitete. Njima ćemo se baviti kasnije u poglavlju <info:object> nakok što naučimo nešto više o primitivnim tipovima podataka.
 
-The `symbol` type is used to create unique identifiers for objects. We mention it here for completeness, but we'll study it after objects.
+Tip `symbol` se koristi za kreiranje jedinstvenih identifikatora za objekte. Ovdje ga spominjemo radi cjelovitosti, ali ćemo ga proučiti nakon objekata.
 
-## The typeof operator [#type-typeof]
+## Operator typeof [#type-typeof]
 
-The `typeof` operator returns the type of the argument. It's useful when we want to process values of different types differently or just want to do a quick check.
+Operator `typeof` vraća tip argumenta. Korisno je kada želimo različito obraditi vrijednosti različitih tipova podataka ili samo želimo napraviti brzu provjeru.
 
-It supports two forms of syntax:
+Podržana su dva oblika sintakse:
 
-1. As an operator: `typeof x`.
-2. As a function: `typeof(x)`.
+1. Kao operator: `typeof x`.
+2. Kao funkcija: `typeof(x)`.
 
-In other words, it works with parentheses or without them. The result is the same.
+Drugim riječima, radi sa zagradama ili bez zagrada. Rezultat je isti.
 
-The call to `typeof x` returns a string with the type name:
+Poziv `typeof x` vraća string sa nazivom tipa:
 
 ```js
 typeof undefined // "undefined"
@@ -217,29 +217,28 @@ typeof alert // "function"  (3)
 */!*
 ```
 
-The last three lines may need additional explanation:
+Poslednje tri linije možda trebaju dodatno objašnjenje:
 
-1. `Math` is a built-in object that provides mathematical operations. We will learn it in the chapter <info:number>. Here, it serves just as an example of an object.
-2. The result of `typeof null` is `"object"`. That's wrong. It is an officially recognized error in `typeof`, kept for compatibility. Of course, `null` is not an object. It is a special value with a separate type of its own. So, again, this is an error in the language.
-3. The result of `typeof alert` is `"function"`, because `alert` is a function. We'll study functions in the next chapters where we'll also see that there's no special "function" type in JavaScript. Functions belong to the object type. But `typeof` treats them differently, returning `"function"`. That's not quite correct, but very convenient in practice.
+1. `Math` je ugrađeni (built-in) objekat koji omogućava matematičke operacije. Učićemo o njemu u poglavlju <info:number>. Ovdje, služi samo kao primjer za objekte.
+2. Rezultat `typeof null` je `"object"`. Ovo je pogrešno. Zvanično ovo predstavlja grešku za `typeof`, ali se ovako čuva radi kompatibilnosti. Naravno, `null` nije objekat. To je specijalna vrijednost sa posebnim vlastitim tipom. Ponovo da napomenemo, ovo je greška u jeziku.
+3. Rezultat `typeof alert` je `"function"`, jer `alert` jeste funcika. O funkcijama ćemo učiti u narednom poglavlju gdje ćemo isto vidjeti da ne postoji specijalni tip "function" u JavaScript-u. Funkcije pripradaju tipu object. Ali `typeof` ih tretira drugačije, vraćajući `"function"`. Ovo nije sasvim ispravno, ali je vrlo zgodno u praksi.
 
 
-## Summary
+## Sažetak
 
-There are 7 basic data types in JavaScript.
+Postoji 7 osnovnih tipova podataka kod JavaScript-a.
 
-- `number` for numbers of any kind: integer or floating-point.
-- `string` for strings. A string may have one or more characters, there's no separate single-character type.
-- `boolean` for `true`/`false`.
-- `null` for unknown values -- a standalone type that has a single value `null`.
-- `undefined` for unassigned values -- a standalone type that has a single value `undefined`.
-- `object` for more complex data structures.
-- `symbol` for unique identifiers.
+- `number` za bilo kakve brojeve: cijele ili floating-point.
+- `string` za strings. String može da sadrži jedan ili više karatkera, ne postoji poseban tip za stringove koji imaju jedan karakter.
+- `boolean` za `true`/`false`.
+- `null` za nepoznate vrijednost -- zasebni tip koji ima samo jednu vrijednost `null`.
+- `undefined` za nedodijeljene vrijednosti -- zasebni tip koji ima samo jednu vrijednost `undefined`.
+- `object` za kompleksije strukture podataka.
+- `symbol` za jedinstvene identifikatore.
 
-The `typeof` operator allows us to see which type is stored in a variable.
+Oeprator `typeof` omogućava da vidimo koji tip vrijednosti se čuva u varijabli.
 
-- Two forms: `typeof x` or `typeof(x)`.
-- Returns a string with the name of the type, like `"string"`.
-- For `null` returns `"object"` -- this is an error in the language, it's not actually an object.
-
-In the next chapters, we'll concentrate on primitive values and once we're familiar with them, we'll move on to objects.
+- Dvije forme: `typeof x` ili `typeof(x)`.
+- Vraća naziv tipa, npr. `"string"`.
+- Za `null` vraća `"object"` -- ovo je greška u jeziku, u stvari i nije objekat.
+U narednim poglavljima, koncentrisaćemo se na primitivne vrijednosti i kada ih dovoljno upoznamo, preći ćemo na objekte.
