@@ -33,6 +33,13 @@ To create a new `Date` object call `new Date()` with one of the following argume
 
     It's a lightweight numeric representation of a date. We can always create a date from a timestamp using `new Date(timestamp)` and convert the existing `Date` object to a timestamp using the `date.getTime()` method (see below).
 
+    Dates before 01.01.1970 have negative timestamps, e.g.:
+    ```js run
+    // 31 Dec 1969
+    let Dec31_1969 = new Date(-24 * 3600 * 1000);
+    alert( Dec31_1969 );
+    ```
+
 `new Date(datestring)`
 : If there is a single argument, and it's a string, then it is parsed automatically. The algorithm is the same as `Date.parse` uses, we'll cover it later.
 
@@ -50,7 +57,7 @@ To create a new `Date` object call `new Date()` with one of the following argume
 `new Date(year, month, date, hours, minutes, seconds, ms)`
 : Create the date with the given components in the local time zone. Only the first two arguments are obligatory.
 
-    - The `year` must have 4 digits: `2013` is okay, `98` is not.
+    - The `year` should have 4 digits. For compatibility, 2 digits are also accepted and considered `19xx`, e.g. `98` is the same as `1998` here, but always using 4 digits is strongly encouraged.
     - The `month` count starts with `0` (Jan), up to `11` (Dec).
     - The `date` parameter is actually the day of month, if absent then `1` is assumed.
     - If `hours/minutes/seconds/ms` is absent, they are assumed to be equal `0`.
@@ -58,11 +65,11 @@ To create a new `Date` object call `new Date()` with one of the following argume
     For instance:
 
     ```js
-    new Date(2011, 0, 1, 0, 0, 0, 0); // // 1 Jan 2011, 00:00:00
+    new Date(2011, 0, 1, 0, 0, 0, 0); // 1 Jan 2011, 00:00:00
     new Date(2011, 0, 1); // the same, hours etc are 0 by default
     ```
 
-    The minimal precision is 1 ms (1/1000 sec):
+    The maximal precision is 1 ms (1/1000 sec):
 
     ```js run
     let date = new Date(2011, 0, 1, 2, 3, 4, 567);
@@ -117,7 +124,7 @@ Besides the given methods, there are two special ones that do not have a UTC-var
 : Returns the timestamp for the date -- a number of milliseconds passed from the January 1st of 1970 UTC+0.
 
 [getTimezoneOffset()](mdn:js/Date/getTimezoneOffset)
-: Returns the difference between the local time zone and UTC, in minutes:
+: Returns the difference between UTC and the local time zone, in minutes:
 
     ```js run
     // if you are in timezone UTC-1, outputs 60
@@ -341,7 +348,7 @@ let time1 = 0;
 let time2 = 0;
 
 *!*
-// run bench(upperSlice) and bench(upperLoop) each 10 times alternating
+// run bench(diffSubtract) and bench(diffGetTime) each 10 times alternating
 for (let i = 0; i < 10; i++) {
   time1 += bench(diffSubtract);
   time2 += bench(diffGetTime);
@@ -369,7 +376,7 @@ for (let i = 0; i < 10; i++) {
 ```warn header="Be careful doing microbenchmarking"
 Modern JavaScript engines perform many optimizations. They may tweak results of "artificial tests" compared to "normal usage", especially when we benchmark something very small, such as how an operator works, or a built-in function. So if you seriously want to understand performance, then please study how the JavaScript engine works. And then you probably won't need microbenchmarks at all.
 
-The great pack of articles about V8 can be found at <http://mrale.ph>.
+The great pack of articles about V8 can be found at <https://mrale.ph>.
 ```
 
 ## Date.parse from a string
@@ -381,7 +388,7 @@ The string format should be: `YYYY-MM-DDTHH:mm:ss.sssZ`, where:
 - `YYYY-MM-DD` -- is the date: year-month-day.
 - The character `"T"` is used as the delimiter.
 - `HH:mm:ss.sss` -- is the time: hours, minutes, seconds and milliseconds.
-- The optional `'Z'` part denotes the time zone in the format `+-hh:mm`. A single letter `Z` that would mean UTC+0.
+- The optional `'Z'` part denotes the time zone in the format `+-hh:mm`. A single letter `Z` would mean UTC+0.
 
 Shorter variants are also possible, like `YYYY-MM-DD` or `YYYY-MM` or even `YYYY`.
 
@@ -400,7 +407,7 @@ We can instantly create a `new Date` object from the timestamp:
 ```js run
 let date = new Date( Date.parse('2012-01-26T13:51:50.417-07:00') );
 
-alert(date);  
+alert(date);
 ```
 
 ## Summary
@@ -420,7 +427,7 @@ Sometimes we need more precise time measurements. JavaScript itself does not hav
 alert(`Loading started ${performance.now()}ms ago`);
 // Something like: "Loading started 34731.26000000001ms ago"
 // .26 is microseconds (260 microseconds)
-// more than 3 digits after the decimal point are precision errors, but only the first 3 are correct
+// more than 3 digits after the decimal point are precision errors, only the first 3 are correct
 ```
 
 Node.js has `microtime` module and other ways. Technically, almost any device and environment allows to get more precision, it's just not in `Date`.
